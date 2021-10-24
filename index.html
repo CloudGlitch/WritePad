@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  <link rel="icon" href="https://www.linkpicture.com/q/new-logo.png">
+  <meta name="msvalidate.01" content="985E31D4671410081DE1A38A31F66B02" />
+  <meta name='author' content='Weberg Studios'>
+  <meta name="description" content="Weberg WritePad developed by Weberg Studios. Find us on github to contact , report bug or issues and suggestions." />
+    <title>
+Weberg WritePad
+    </title>
+    <style>
+* {
+ font-family:Century Gothic;
+}
+*::-webkit-scrollbar-track {
+    background-color: #000;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 9999px;
+}
+#txt {
+  width: 90%;
+  height: 400px;
+  resize: none;
+}
+.dropdown-content {
+  display: none;
+  background-color: #f1f1f1;
+  z-index: 99px;
+  position: relative;
+  overflow: auto;
+  width:100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+button {
+  background-color: #ddd;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+.dropbtn {
+  width: 100px;
+  height: 20px;
+}
+.dropdown-content a {
+  color: black;
+  padding: 0px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover , .dropdown2 a:hover , .dropdown3 a:hover {
+  background-color: #ddd;
+  display: inline-block;
+}
+#div {
+  display: inline-flex;
+}
+
+.show {display: block;}
+</style>
+
+  </head>
+  <body>
+<center>
+      <h1 id="headh1">Weberg WritePad</h1>
+<div id="div">
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Font Size</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#" onclick="funcsmall();">small</a>
+          <a href="#" onclick="funcmedium();">medium</a>
+          <a href="#" onclick="funclarge();">large</a>
+        </div>
+      </div>&nbsp;&nbsp;
+      <div class="dropdown2">
+        <button onclick="myFunction2()" class="dropbtn">Font Color</button>
+        <div id="myDropdown2" class="dropdown-content">
+          <a href="#" onclick="funcred();">red</a>
+          <a href="#" onclick="funcgreen();">green</a>
+          <a href="#" onclick="funcblue();">blue</a>
+          <a href="#" onclick="funcyellow();">yellow</a>
+          <a href="#" onclick="funcblack();">black</a>
+        </div>
+      </div>
+      &nbsp;&nbsp;
+      <div class="dropdown3">
+        <button onclick="myFunction3()" class="dropbtn">Font Family</button>
+        <div id="myDropdown3" class="dropdown-content">
+          <a href="#" onclick="funcgothic();">Century Gothic</a>
+          <a href="#" onclick="funccomic();">Comic Sans MS</a>
+          <a href="#" onclick="funcimpact();">Impact</a>
+          <a href="#" onclick="funcarial();">Arial</a>
+        </div>
+      </div>
+      </div>
+
+      <br><br><textarea id="txt" autofocus></textarea>
+  
+</center>
+<h3 style="position: absolute; bottom: 0px; right: 0px; font-size:10px;" align='right'>Copyright (c) 2021, Weberg Studios
+    All rights reserved.</h3>
+    </div>
+  </body>
+<script>
+  var txt = document.getElementById("txt").value;
+  function funcsmall() {
+    document.getElementById("txt").style.fontSize = "10px";
+  }
+  function funcmedium() {
+    document.getElementById("txt").style.fontSize = "30px";
+  }
+  function funclarge() {
+    document.getElementById("txt").style.fontSize = "50px";
+  }
+
+  function funcred() {
+    document.getElementById("txt").style.color = "red";
+  }
+  
+  function funcgreen() {
+    document.getElementById("txt").style.color = "#00cc00";
+  }
+  function funcblue() {
+    document.getElementById("txt").style.color = "#008ae6";
+  }
+  function funcyellow() {
+    document.getElementById("txt").style.color = "yellow";
+  }
+  function funcblack() {
+    document.getElementById("txt").style.color = "black";
+  }
+  function funcgothic() {
+    document.getElementById("txt").style.fontFamily = "Century Gothic";
+  }
+  function funccomic() {
+    document.getElementById("txt").style.fontFamily = "Comic Sans MS";
+  }
+  function funcimpact() {
+    document.getElementById("txt").style.fontFamily = "impact";
+  }
+  function funcarial() {
+    document.getElementById("txt").style.fontFamily = "Arial";
+  }
+  
+
+
+
+
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+  window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+}
+function myFunction2() {
+  document.getElementById("myDropdown2").classList.toggle("show");
+  window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+}
+function myFunction3() {
+  document.getElementById("myDropdown3").classList.toggle("show");
+  window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+}
+</script>
+</html>
