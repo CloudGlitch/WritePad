@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -93,8 +94,11 @@ button {
           <a href="#" onclick="funcimpact();">Impact</a>
           <a href="#" onclick="funcarial();">Arial</a>
         </div>
+      </div>&nbsp;&nbsp;
+      <button id="save" class="dropbtn">Save</button>
       </div>
-      </div>
+      
+      <h3 id="savetxt">When saving save as .txt</h3>
 
       <br><br><textarea id="txt" autofocus></textarea>
   
@@ -104,6 +108,10 @@ button {
     </div>
   </body>
 <script>
+            document.getElementById("save").onclick = function() {
+            var content = document.getElementById('txt').value;
+            window.open("data:application/txt," + encodeURIComponent(content), "_self");
+        }
   var txt = document.getElementById("txt").value;
   function funcsmall() {
     document.getElementById("txt").style.fontSize = "10px";
