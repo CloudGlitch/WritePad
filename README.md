@@ -1,3 +1,5 @@
 # weberg-writepad
-## weberg writepad v1 created by Weberg Studios
-### wrte and edit you sentences 
+## weberg writepad v2 created by Weberg Studios
+### whats new
+now you can align text
+#### wrte and edit you sentences 
