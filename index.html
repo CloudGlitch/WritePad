@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -51,7 +52,7 @@ button {
   display: block;
 }
 
-.dropdown a:hover , .dropdown2 a:hover , .dropdown3 a:hover {
+.dropdown a:hover , .dropdown2 a:hover , .dropdown3 a:hover , .dropdown4 a:hover {
   background-color: #ddd;
   display: inline-block;
 }
@@ -95,6 +96,14 @@ button {
           <a href="#" onclick="funcarial();">Arial</a>
         </div>
       </div>&nbsp;&nbsp;
+<div class="dropdown4">
+        <button onclick="myFunction4()" class="dropbtn">Align</button>
+        <div id="myDropdown4" class="dropdown-content">
+          <a href="#" onclick="funcleft();">Left</a>
+          <a href="#" onclick="funccenter();">Center</a>
+          <a href="#" onclick="funcright();">Right</a>
+        </div>
+      </div>&nbsp;&nbsp;
       <button id="save" class="dropbtn">Save</button>
       </div>
       
@@ -113,6 +122,15 @@ button {
             window.open("data:application/txt," + encodeURIComponent(content), "_self");
         }
   var txt = document.getElementById("txt").value;
+  function funcleft() {
+   document.getElementById("txt").style.textAlign = "left";
+ }
+ function funccenter() {
+   document.getElementById("txt").style.textAlign = "center";
+ }
+ function funcright() {
+   document.getElementById("txt").style.textAlign = "right";
+ }
   function funcsmall() {
     document.getElementById("txt").style.fontSize = "10px";
   }
@@ -187,6 +205,21 @@ function myFunction2() {
 }
 function myFunction3() {
   document.getElementById("myDropdown3").classList.toggle("show");
+  window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+}
+function myFunction4() {
+  document.getElementById("myDropdown4").classList.toggle("show");
   window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
     var dropdowns = document.getElementsByClassName("dropdown-content");
