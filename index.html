@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -109,7 +108,7 @@ button {
       
       <h3 id="savetxt">When saving save as .txt</h3>
 
-      <br><br><textarea id="txt" autofocus></textarea>
+      <br><br><textarea onkeyup="createItem();" id="txt" autofocus></textarea>
   
 </center>
 <h3 style="position: absolute; bottom: 0px; right: 0px; font-size:10px;" align='right'>Copyright (c) 2021, Weberg Studios
@@ -117,6 +116,18 @@ button {
     </div>
   </body>
 <script>
+
+
+        function createItem() {
+            var y = document.getElementById("txt").value;
+            localStorage.setItem("webergwritepad", y );
+        }
+        window.onload = readValue();
+        function readValue() {
+            var x = localStorage.getItem("webergwritepad");
+            document.getElementById("txt").innerHTML = x;
+        }
+
             document.getElementById("save").onclick = function() {
             var content = document.getElementById('txt').value;
             window.open("data:application/txt," + encodeURIComponent(content), "_self");
