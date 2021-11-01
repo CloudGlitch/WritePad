@@ -2,4 +2,4 @@
 ## weberg writepad v2.1 created by Weberg Studios
 ### wrte and edit you sentences online
 #### whats new
-now you can align text
+if you write a paragraph in and if you accidently close the tab or window, after you reopen your paragraph will be retrieved.
