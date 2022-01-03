@@ -5,10 +5,10 @@
 
   <link rel="icon" href="logo.png">
   <meta name="msvalidate.01" content="985E31D4671410081DE1A38A31F66B02" />
-  <meta name='author' content='Weberg Studios'>
-  <meta name="description" content="Weberg WritePad developed by Weberg Studios. Find us on github to contact , report bug or issues and suggestions." />
+  <meta name='author' content='CloudGlitch'>
+  <meta name="description" content="Cloud WritePad developed by CloudGlitch. write, edit and save. Find us on github to contact , report bug or issues and suggestions." />
     <title>
-Weberg WritePad
+WritePad
     </title>
     <style>
 * {
@@ -65,7 +65,7 @@ button {
   </head>
   <body>
 <center>
-      <h1 id="headh1">Weberg WritePad</h1>
+      <h1 id="headh1">WritePad</h1>
 <div id="div">
       <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">Font Size</button>
@@ -111,9 +111,6 @@ button {
       <br><br><textarea onkeyup="createItem();" id="txt" autofocus></textarea>
   
 </center>
-<h3 style="position: absolute; bottom: 0px; right: 0px; font-size:10px;" align='right'><span id="c">
-            <span style="font-size:15px; bottom:-2px; position:relative;">©</span> Weberg Studios <span id="year"></span>
-        </span></h3>
     <script type="text/javascript">
   document.getElementById("year").innerHTML = (new Date().getFullYear());
 </script>
@@ -124,11 +121,11 @@ button {
 
         function createItem() {
             var y = document.getElementById("txt").value;
-            localStorage.setItem("webergwritepad", y );
+            localStorage.setItem("cloudglitch", y );
         }
         window.onload = readValue();
         function readValue() {
-            var x = localStorage.getItem("webergwritepad");
+            var x = localStorage.getItem("cloudglitch");
             document.getElementById("txt").innerHTML = x;
         }
 
